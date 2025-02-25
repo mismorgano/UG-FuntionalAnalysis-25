@@ -1,0 +1,5 @@
+# code editor files
+.vscode
+
+# ignore all pdf files
+*.pdf
