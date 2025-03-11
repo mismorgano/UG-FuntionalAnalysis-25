@@ -7,11 +7,11 @@
 
 
 // The template setup
-#let template(title, doc) = {
+#let template(title, subtitle, doc) = {
   show: thmrules.with(qed-symbol: $square$) 
   // latex-like setup
   set text(size: 12pt, font: "New Computer Modern", lang: "es")
-  set par(first-line-indent: 1.8em, justify: true, leading: 0.55em, spacing: 0.55em)
+  set par(first-line-indent: 1.2em, justify: true, leading: 0.55em, spacing: 0.75em)
 
   show heading: set block(above: 1.4em, below: 1em)
   // set enum(numbering: "i)")
@@ -31,8 +31,9 @@
   // title setup
   align(center)[
 
-    #text(17pt)[ Análisis Funcional I ] \ // subject
-    #text(15pt)[#title]
+    #text(19pt)[ _*Análisis Funcional I*_ ] \ // subject
+    #text(17pt)[#title] \
+    #text(15pt)[#subtitle]
 
     #text(12pt)[
       #grid(columns: (1fr, 1fr), align(center)[
