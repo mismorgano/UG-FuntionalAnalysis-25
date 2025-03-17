@@ -7,7 +7,7 @@
 
 
 // The template setup
-#let template(title, subtitle, doc) = {
+#let template(title: "", subtitle: "", doc) = {
   show: thmrules.with(qed-symbol: $square$) 
   // latex-like setup
   set text(size: 12pt, font: "New Computer Modern", lang: "es")
@@ -64,8 +64,9 @@
   show "b.l.m": [mapeo lineal acotado]
   show "ssi": _ => [si y solo si]
   show "t.q": [tal que]
+  show "s.C": [sucesión de Cauchy]
 
-  show "eps": $epsilon$
+  // show "eps": $epsilon$
 
   // change look of less equal and greater equal
   show math.lt.eq : math.lt.slant
@@ -85,7 +86,7 @@ text(style: "italic")[#it])
 #let conv(S) = $"conv"(#S)$ // convex hull
 #let span(S, closed) = { if closed [$cls("span")(#S)$] else [$"span"(#S)$] }
 #let int(S) = $"Int"(#S)$ // interior
-
+#let eps = $epsilon$
 #let wc = $attach(->, t: w)$ // weak convergence
 #let wsc = $attach(->, t: w*)$ // weak star convergence
 #let comp = $complement$
