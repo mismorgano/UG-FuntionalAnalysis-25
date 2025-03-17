@@ -3,7 +3,7 @@
 // math imports
 #import "../config.typ": eps, cls
 
-#show: doc => template([Tarea 3], doc)
+#show: doc => template(title: [Tarea 3], doc)
 
 #exercise[][
   Considera un e.n $(E, norm(dot))$. Denotemos por $(E^*, d^*)$ al e.m completado de $(E, d)$, donde $d$ es la métrica

@@ -4,22 +4,22 @@
 // math imports
 #import "../config.typ": eps
 
-#show: doc => template([Tarea 2], doc)
+#show: doc => template(title: [Tarea 2], doc)
 
 #exercise[][
-  Dos espacios métricos sobre el mismo conjunto $(M, d_1)$ y $(M, d_2)$ se dice que son homeomorfos si la función identidad
-  es bicontinua. En tal caso se dice que las métricas $d_1$ y $d_2$ son equivalentes.
+  Dos espacios métricos sobre el mismo conjunto $(M, d_1)$ y $(M, d_2)$ se dice que son homeomorfos si la función
+  identidad es bicontinua. En tal caso se dice que las métricas $d_1$ y $d_2$ son equivalentes.
   + Prueba que si $phi:RR->RR$ es un homeomorfismo, entonces la métrica en $RR$ definida por $d'(x, y) := abs(phi(x) - phi(y))$ es
     equivalente a la métrica usual en $RR$.
   + Prueba que $d'(x, y) := abs(x/(1+abs(x)) - y/(1+abs(y)))$ determina una métrica equivalente a la métrica usual en $RR$.
 ]
 + #proof[
-    Sea $I:(RR, d') -> (RR, abs(dot))$ la función identidad, veamos que $(RR, d')$ y $(RR, abs(dot.c))$ son homeomorfos. Primero veamos que $I_d$ es
-    continua. Dado $x in RR$ y $eps>0$ 
+    Sea $I:(RR, d') -> (RR, abs(dot))$ la función identidad, veamos que $(RR, d')$ y $(RR, abs(dot.c))$ son homeomorfos.
+    Primero veamos que $I_d$ es continua. Dado $x in RR$ y $ eps >0$
   ]
 + #proof[
 
-]
+  ]
 
 
 #exercise[][
@@ -58,9 +58,9 @@ Supongamos que $K$ es compacto y sea ${x_n} subset K$ una sucesión y considerem
 ]
 _Solución:_ En este caso consideremos un e.m $X$ infinito y consideremos la métrica discreta $d: X times X -> X$, 
 $ d(x, y) = cases(1 "si" x!=y, 0 "si" x = y.) $
-Se puede ver que $X$ es acotado pues podemos tomar cualquier punto $x in X$ y se tiene que  $X subset B(x, 2) $. 
-Sin embargo para $eps <1$ tenemos que $B(x, eps) = {x}$ para todo $x in X$, por lo cual si queremos cubrir $X$, 
-necesitamos una cantidad infinita de bolas.
+Se puede ver que $X$ es acotado pues podemos tomar cualquier punto $x in X$ y se tiene que $X subset B(x, 2) $. Sin
+embargo para $eps <1$ tenemos que $B(x, eps) = {x}$ para todo $x in X$, por lo cual si queremos cubrir $X$, necesitamos
+una cantidad infinita de bolas.
 
 #exercise[][
   Sea $f: X -> Y$ una función entre dos espacios métricos, $X, Y$. Prueba que si $X$

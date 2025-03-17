@@ -1,6 +1,6 @@
 #import "../config.typ":template, exercise, proof, sol
 
-#show: template.with("Tarea 4")
+#show: template.with(title: "Tarea 4")
 
 Ejercicios del _Limaye_
 #exercise[5.2][
@@ -19,7 +19,7 @@ Ejercicios del _Limaye_
   Sean $norm(space)_1, dots, norm(space)_m$ normas en un e.v. Sean $r_1, dots, r_m$ numeros reales positivos y $1<= p <= infinity$.
   Para $x in X$, sea
   $ norm(x) = cases(
-    (r_1norm(x)_1^p+ dots.c+r_m  norm(x)_m^p)^(1/p) ", si" 1<=p<infinity,
+    (r_1norm(x)_1^p+ dots.c+r_m norm(x)_m^p)^(1/p) ", si" 1<=p<infinity,
     max{r_1norm(space)_1, dots, r_m norm(space)_m} ", si" p=infinity
 
   ,
@@ -28,13 +28,13 @@ Ejercicios del _Limaye_
   Entonces $norm(space)$ es una norma en $X$, y $norm(x_n -x) -> 0$ ssi $norm(x_n - x)_j -> 0$ para todo $j=1, dots, m$.
 ]
 #proof[
-  Separemos la prueba por casos. Si $p in [1, infinity)$ notemos que 
-  $ norm(x) = 0  <=> (r_1norm(x)_1^p+ dots.c+r_m  norm(x)_m^p)^(1/p) = 0 <=> r_1norm(x)_1^p+ dots.c+r_m  norm(x)_m^p = 0, $
+  Separemos la prueba por casos. Si $p in [1, infinity)$ notemos que
+  $ norm(x) = 0 <=> (r_1norm(x)_1^p+ dots.c+r_m norm(x)_m^p)^(1/p) = 0 <=> r_1norm(x)_1^p+ dots.c+r_m norm(x)_m^p = 0, $
   como cada sumando es no negativo tenemos, lo anterior pasa ssi $r_i norm(x)_i^p = 0$ para todo $i=1, dots, m$
 
   La homogeneidad se sigue de que cada $norm(space)_i$ es homogénea
 
-  Para la desigualdad del triangulo podemos ver que 
+  Para la desigualdad del triangulo podemos ver que
 ]
 #exercise[5.5][
   Sea $X$ un e.l y $E$ un subconjunto de $X$ que es convexo, balanceado (esto es, $k x in E$ siempre que $x in E$ y $k in bold(K)$ t.q $abs(k)<=1$),

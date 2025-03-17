@@ -1,6 +1,6 @@
 #import "../config.typ": *
 
-#show: template.with([Tarea 7])
+#show: template.with(title: [Tarea 7])
 
 #exercise[6E 5][
   Supongamos que
@@ -47,5 +47,21 @@
 
 #exercise[6E 12][
   Supongamos que $T:V -> W$ es un m.l.a donde $V, W$ son espacios de Banach. Demuestra que $T$ esta acotado por abajo ssi $T$ es
-  inyectiva y  $T(V)$ es un un subespacio cerrado de $W$.
+  inyectiva y $T(V)$ es un un subespacio cerrado de $W$.
+]
+
+#exercise[
+  Prueba que
+  $
+    sum_(j>=0) 2^(-j) exp(sqrt(-1)3^j x)
+  $
+  es una función continua que no es diferenciable en ningún punto.
+]
+
+#exercise[
+  Demuestra que
+  $
+    sum_(j>=0) 10^(-j) {10^j x},
+  $
+  donde ${x}$ es la distancia al entero mas cercano.
 ]

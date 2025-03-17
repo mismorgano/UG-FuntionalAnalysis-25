@@ -4,7 +4,7 @@
 #import "../config.typ": cls
 
 
-#show: doc => template([Tarea 1], doc)
+#show: doc => template(title: [Tarea 1], doc)
 
 
 #exercise[6A 1][
@@ -21,7 +21,7 @@
 #exercise[6A 2][
   Demuestra que todo conjunto finito de un e.m es cerrado.
 ]
-Basta ver  que los singulares ${x}$ son cerrados. $ {x} = $
+Basta ver que los singulares ${x}$ son cerrados. $ {x} = $
 
 Cualquier sucesion convergente tiene que ser eventualmente constante y por tanto contiene su limite.
 
@@ -63,11 +63,11 @@ Veamos que el complemento es abierto.
 
 #exercise[6A 16][
   Supongamos que $(U, d)$ es un e.m. Sea $W$ el conjunto de todas las sucesiones de Cauchy de elementos de $U$.
-  + Para $(f_n)$ y $(g_n)$ en $W$, definimos $(f_n) equiv (g_n)$ como 
-    $ lim_(k->infinity) d(f_k, g_k) = 0. $ 
+  + Para $(f_n)$ y $(g_n)$ en $W$, definimos $(f_n) equiv (g_n)$ como
+    $ lim_(k->infinity) d(f_k, g_k) = 0. $
     Muestra que $equiv$ es una relación de equivalencia en $W$.
-  + Sea $V$ el conjunto de las clases de equivalencia de elementos de $W$ bajo la relación de equivalencia anterior.
-    Para $(f_n) in W$, sea 
+  + Sea $V$ el conjunto de las clases de equivalencia de elementos de $W$ bajo la relación de equivalencia anterior. Para $(f_n) in W$,
+    sea
   + Muestra que $(V, d_V)$ es un e.m completo.
   + Muestra que el mapeo de $U$ a $V$ toma $f in U$
   + Explica por que lo anterior muestra que todo e.m es subconjunto de un e.m completo.

@@ -1,8 +1,8 @@
-#import "../config.typ": template, exercise, proof, sol, thmbox, thmplain, e
+#import "../config.typ": template, exercise, proof, sol, thmbox, thmplain 
 
 #import "../config.typ": ip, eps
 
-#show: template.with([Tarea 6 \ Espacios de Bergman])
+#show: template.with(title: [Tarea 6 \ Espacios de Bergman])
 
 
 #let theorem = thmbox("theorem", "Teorema", inset: (left: 0em), base: none)
