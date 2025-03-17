@@ -7,11 +7,12 @@ on:
   pull_request:
     branches:
       - main
-permissions:
-  contents: write
-  
+      
 jobs:
-  build_and_deploy:
+  build:
+
+    permissions:
+      contents: write
 
     runs-on: ubuntu-latest
 
@@ -40,3 +41,20 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: output
+
+  deploy:
+    
+    permissions:
+      pages: write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
