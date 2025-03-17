@@ -7,7 +7,7 @@ on:
   pull_request:
     branches:
       - main
-      
+
 jobs:
   build:
 
@@ -23,13 +23,15 @@ jobs:
       - name: Typst setup
         uses: typst-community/setup-typst@v4
       
+      - name: Setup pages
+        uses: actions/configure-pages@v5
+        
       - name: Compile Typst files
         run: |
           mkdir -p output
           for file in $(find . -type f -name "*.typ"); do
             typst compile "$file" "output/$(basename "$file" .typ).pdf" --root .
           done
-
 
       - name: Upload PDFs as artifact
         uses: actions/upload-artifact@v4
@@ -58,3 +60,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: compiled-pdfs
