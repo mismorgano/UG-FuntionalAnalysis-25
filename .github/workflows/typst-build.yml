@@ -21,10 +21,10 @@ jobs:
       - name: Compile Typst files
         run: |
           mkdir -p output
-          for file in *.typ; do 
-            [ -e "$file" ] || continue
-            typst compile "$file" "output/${file%.typ}.pdf"
+          for file in $(find . -type f -name "*.typ"); do
+            typst compile "$file" "output/$(basename "$file" .typ).pdf"
           done
+
 
       - name: Upload PDFs as artifact
         uses: actions/upload-artifact@v4
