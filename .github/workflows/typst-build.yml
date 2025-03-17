@@ -8,7 +8,7 @@ on:
     branches:
       - main
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,27 +32,8 @@ jobs:
           name: compiled-pdfs
           path: output/*.pdf
 
-  deploy:
-
-    needs: build
-  
-    permissions:
-      pages: write
-      id-token: write
-        
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Check if PDFs exist
-        run: |
-          if [ -z "$(ls -A output/*.pdf 2>/dev/null)" ]; then
-            ls -la ./output
-            echo "No PDFs found. Skipping deployment."
-            exit 1
-          fi
-
       - name: Deploy to GitHub pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: output
-
+  
