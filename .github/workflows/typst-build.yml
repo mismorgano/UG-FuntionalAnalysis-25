@@ -1,0 +1,52 @@
+name: Build and deploy Typst PDFs to GitHub pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Typst setup
+        uses: typst-community/setup-typst@v4
+      
+      - name: Compile Typst files
+        run: |
+          mkdir -p output
+          for file in *.typ; do 
+            [-e "$file" ] || continue
+            typst compile "$file" "output/${file%.typ}.pdf"
+          done
+
+      - name: Upload PDFs as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: compiled-pdfs
+          path: output/*.pdf
+
+  deploy:
+
+    needs: build
+  
+    permissions:
+      pages: write
+      id-token: write
+    
+    environment: 
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
