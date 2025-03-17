@@ -49,4 +49,6 @@ jobs:
       - name: Deploy to GitHub pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: compiled-pdfs
 
