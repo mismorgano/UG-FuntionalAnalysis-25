@@ -22,6 +22,11 @@ jobs:
       
       - name: Typst setup
         uses: typst-community/setup-typst@v4
+
+      - name: Python setup
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
       
       - name: Setup pages
         uses: actions/configure-pages@v5
@@ -32,6 +37,14 @@ jobs:
           for file in $(find . -type f -name "*.typ"); do
             typst compile "$file" "output/$(basename "$file" .typ).pdf" --root .
           done
+
+      - name: Change to gh-pages branch
+        run: |
+          git fetch origin
+          git switch gh-pages
+      
+      - name: Generate index.html
+        run: python list_pdfs.py output
 
       - name: Upload PDFs as artifact
         uses: actions/upload-pages-artifact@v3
