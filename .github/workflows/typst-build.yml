@@ -38,11 +38,6 @@ jobs:
         with:
           path: output/
           
-      - name: Deploy to GitHub pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: output
-
   deploy:
     
     permissions:
