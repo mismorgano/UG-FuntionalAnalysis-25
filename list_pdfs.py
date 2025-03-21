@@ -8,7 +8,7 @@ def read_template(path: Path) -> str:
 
 def make_pdf_list(pdf_path: Path, item_template: str):
     pdf_files = [f for f in os.listdir(pdf_path) if f.endswith(".pdf")]
-    links = "\n".join(item_template.format(pdf=pdf) for pdf in pdf_files)
+    links = "\n".join(item_template.format(pdf=pdf) for pdf in pdf_files.sort())
     return links
 
 
