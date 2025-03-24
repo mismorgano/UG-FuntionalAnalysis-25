@@ -1,0 +1,40 @@
+
+axler:
+  type: Book
+  title: Measure, Integration & Real Analysis
+  author: Axler, Sheldon
+  date: 2020 
+  publisher: Springer International Publishing
+  location: Cham  
+  edition: 1
+  language: en
+  page-total: 411
+  volume: 282
+  serial-number:
+    isbn: 9783030331429,9783030331436
+  url:
+    value: https://measure.axler.net/MIRA.pdf
+  parent:
+    type: book
+    title: Graduate Texts in Mathematics
+
+jabbari:
+  type: misc
+  title: Notes for Functional Analysis
+  author: Jabbari, Mohammad 
+  publisher: CIMAT
+  date: 2021
+  language: en
+  url:
+    value: https://www.cimat.mx/~gil/pdf/[Jabbari]Functional_Analysis_Notes.pdf
+
+limaye:
+  type: book
+  title: Functional Analysis
+  author: Limaye, Balmohan Vishnu
+  date: 2008
+  publisher: New Age International
+  edition: 2
+  serial-number:
+    isbn: 8122408494,9788122408492
+
