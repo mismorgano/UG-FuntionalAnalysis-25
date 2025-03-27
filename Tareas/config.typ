@@ -7,7 +7,7 @@
 
 
 // The template setup
-#let template(title: "", subtitle: "", doc) = {
+#let template(title: [], subtitle: [], doc) = {
   show: thmrules.with(qed-symbol: $square$) 
   // latex-like setup
   set text(size: 12pt, font: "New Computer Modern", lang: "es")
@@ -65,6 +65,7 @@
   show "ssi": _ => [si y solo si]
   show "t.q": [tal que]
   show "s.C": [sucesión de Cauchy]
+  show "p.i": [producto interno]
 
   // show "eps": $epsilon$
 
