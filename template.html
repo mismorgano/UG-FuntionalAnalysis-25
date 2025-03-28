@@ -7,6 +7,7 @@
     <title>Análisis Funcional</title>
     <link href="style.css" rel="stylesheet" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.0.375/pdf.min.mjs" type="module"></script>
+    <script type="module" src="./pdf_viewer.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -15,6 +16,10 @@
     <ul>
         {links}
     </ul>
+    <canvas id="the-pdf"></canvas>
+    <div id="pdf-viewer">
+        <div id="pdf"></div>
+    </div>
 </body>
 
 </html>
