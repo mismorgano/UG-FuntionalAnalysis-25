@@ -4,6 +4,7 @@
 
 #let proof = thmproof("proof", "Demostración", inset: (left: 0em))
 #let sol = thmplain("solution", "Solución", inset: (left: 0em))
+#let lemma = thmplain("lemma", "Lema", inset: (left: 0em), base: none, titlefmt: strong)
 
 
 // The template setup
