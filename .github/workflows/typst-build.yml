@@ -45,6 +45,9 @@ jobs:
       
       - name: Generate index.html
         run: python list_pdfs.py output
+      
+      - name: Move files required by index.html to output
+        run: mv pdf_viewer.js style.css output
 
       - name: Upload PDFs as artifact
         uses: actions/upload-pages-artifact@v3
