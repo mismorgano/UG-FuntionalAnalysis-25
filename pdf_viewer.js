@@ -1,39 +1,58 @@
 
 
-let url = './Tarea-01.pdf'
+// let url = document.getElementsByClassName("pdf-url");
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/5.0.375/pdf.worker.min.mjs'
 
-let loadingTask = pdfjsLib.getDocument(url);
+function getURL(aElement) {
+    let url = new URL(aElement.href);
+    return url.pathname;
+}
 
-loadingTask.promise.then(pdf => {
-    console.log('PDF loaded');
+function loadPDF(canvasID, url) {
+    let loadingTask = pdfjsLib.getDocument(url);
 
-    let pageNumber = 1;
-    pdf.getPage(pageNumber).then(page => {
-        console.log('Page loaded');
+    loadingTask.promise.then(pdf => {
+        console.log('PDF loaded');
 
-        let scale = 1.5;
-        let viewport = page.getViewport({ scale: scale });
+        let pageNumber = 1;
+        pdf.getPage(pageNumber).then(page => {
+            console.log('Page loaded');
 
-        let canvas = document.getElementById('the-pdf');
-        let context = canvas.getContext('2d');
+            let scale = 1;
+            let viewport = page.getViewport({ scale: scale });
 
-        canvas.width = viewport.width * window.devicePixelRatio;
-        canvas.height = viewport.height * window.devicePixelRatio;
-        canvas.style.width = viewport.width + "px";
-        canvas.style.height = viewport.height + "px";
+            let canvas = document.getElementById(canvasID);
 
-        context.scale(window.devicePixelRatio, window.devicePixelRatio);
-        let renderContext = {
-            canvasContext: context,
-            viewport: viewport,
-            intent: 'display'
-        };
+            let context = canvas.getContext('2d');
 
-        let renderTask = page.render(renderContext);
-        renderTask.promise.then(() => {
-            console.log('Page rendered');
+
+            canvas.width = viewport.width * window.devicePixelRatio;
+            canvas.height = viewport.height * window.devicePixelRatio;
+            canvas.style.width = viewport.width + "px";
+            canvas.style.height = viewport.height + "px";
+
+            context.scale(window.devicePixelRatio, window.devicePixelRatio);
+            let renderContext = {
+                canvasContext: context,
+                viewport: viewport,
+                intent: 'display'
+            };
+
+            let renderTask = page.render(renderContext);
+            renderTask.promise.then(() => {
+                console.log('Page rendered');
+            })
         })
     })
-})
+}
+
+let pdfs = document.getElementsByTagName("a");
+
+for (let pdf of pdfs) {
+
+    const url = getURL(pdf);
+    const canvasID = pdf.firstElementChild.id;
+
+    loadPDF(canvasID, url);
+}
