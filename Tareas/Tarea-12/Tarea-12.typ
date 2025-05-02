@@ -68,7 +68,8 @@
   Sea $0 != a in X$. Existe un único$f in X'$ t.q $norm(f) = 1$ y $f(a) = norm(a)$ ssi existe un único funcional de
   soporte $f$ para
   $#U$ en $a$ t.q $f(a) = norm(a)$ ssi existe un único hiperplano de soporte #footnote[Un *hiperplano de soporte* (para $E$ en $b$) es el hiperplano real ${x in X: Re f(x) = Re f(b)}$ con $f$ un funcional de
-    soporte para $E$ en $b$. ] para $#U$ en $a$. ]
+    soporte para $E$ en $b$. ] para $#U$ en $a$.
+]
 
 #exercise[@limaye 7.11 Helly 1912][
   Para cada $s$ en algún conjunto indexado $S$, sea $x_s in X$ y $k_s in KK$. Sea $a>=0$. Entonces existe algún $f in X'$ t.q
@@ -93,7 +94,7 @@
 ]
 
 #exercise[@limaye 7.15][
-
+  Sean $X$ y $Y$ espacios normados. Entonces $cal(B)(X, Y) = {0}$ ssi $X = {0}$ o $Y = {0}$.
 ]
 
 #bibliography("../biblio.yml")
