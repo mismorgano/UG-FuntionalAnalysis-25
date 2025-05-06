@@ -1,0 +1,11 @@
+
+Garling_2007:
+  type: chapter
+  title: Grothendieck’s inequality, type and cotype
+  author: Garling, D. J. H.
+  date: 2007
+  page-range: 302–324
+  parent:
+    type: book
+    title: 'Inequalities: A Journey into Linear Analysis'
+    publisher: Cambridge University Press
