@@ -38,3 +38,14 @@ limaye:
   serial-number:
     isbn: 8122408494,9788122408492
 
+kreyszig:
+  type: book
+  title: Introductory Functional Analysis with Applications
+  author: Kreyszig, E.
+  date: 1978
+  publisher: Wiley
+  serial-number:
+    isbn: '9780471507314'
+  parent:
+    type: book
+    title: Wiley classics library
