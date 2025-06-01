@@ -87,7 +87,7 @@ text(style: "italic")[#it])
 #let ip(x, y) = $angle.l #x, #y angle.r$ // internal product
 #let cls(S) = $overline(#S)$ // closure
 #let conv(S) = $"conv"(#S)$ // convex hull
-#let span(S, closed) = { if closed [$cls("span")(#S)$] else [$"span"(#S)$] }
+#let span(S, closed: false) = { if closed [$cls("span")(#S)$] else [$"span"(#S)$] }
 #let int(S) = $"Int"(#S)$ // interior
 #let eps = $epsilon$
 #let wc = $attach(->, t: w)$ // weak convergence
