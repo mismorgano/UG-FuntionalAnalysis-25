@@ -15,7 +15,7 @@
   show "m.l.a": _ => [m.l acotado]
   show "b.l.m": [mapeo lineal acotado]
   show "b.l.o": [operador lineal acotado]
-  show "ssi": _ => [si y solo si]
+  show " ssi ": _ => [ si y solo si ]
   show "t.q": [tal que]
   show "s.C": [sucesión de Cauchy]
   show "p.i": [producto interno]

@@ -9,3 +9,56 @@ Garling_2007:
     type: book
     title: 'Inequalities: A Journey into Linear Analysis'
     publisher: Cambridge University Press
+
+pisier2011grothendieckstheorempastpresent:
+  type: misc
+  title: Grothendieck's Theorem, past and present
+  author: Pisier, Gilles
+  date: 2011
+  url: https://arxiv.org/abs/1101.4195
+  serial-number:
+    arxiv: '1101.4195'
+
+matrix_norms_related_to_grothendieck_inequality:
+  type: article
+  title: Matrix norms related to Grothendieck's inequality
+  author: Davie, A. M.
+  date: 1985
+  editor:
+  - Kalton, Nigel J.
+  - Saab, Elias
+  page-range: 22-26
+  serial-number:
+    isbn: 978-3-540-39736-6
+  parent:
+    type: proceedings
+    title: Banach Spaces
+    publisher:
+      name: Springer Berlin Heidelberg
+      location: Berlin, Heidelberg
+
+pisier1984factorization:
+  type: book
+  title: Factorization of Linear Operators and Geometry of Banach Spaces
+  author: Pisier, Gilles
+  date: 1984
+  publisher:
+    name: American Mathematical Society
+    location: Providence, RI
+  volume: 60
+  parent:
+    type: book
+    title: CBMS Regional Conference Series in Mathematics
+
+braverman2011grothendieckconstantstrictlysmaller:
+  type: misc
+  title: The Grothendieck constant is strictly smaller than Krivine's bound
+  author:
+  - Braverman, Mark
+  - Makarychev, Konstantin
+  - Makarychev, Yury
+  - Naor, Assaf
+  date: 2011
+  url: https://arxiv.org/abs/1103.6161
+  serial-number:
+    arxiv: '1103.6161'
